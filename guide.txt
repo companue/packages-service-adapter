@@ -1,0 +1,20 @@
+1.Search and replace
+    package-skeleton
+with
+    [your-package-name]
+
+2.Search and replace
+    PackageSkeleton
+with
+    [YourPackageName]
+
+3.Rename these files to {YourPackageName.php}
+    src/PackageSkeleton.php
+    src/Facades/PackageSkeleton.php
+
+4.Rename these files to {your-package-name.php}
+    config/package-skeleton.php
+
+6.run "composer install"
+
+5.run "composer dump"

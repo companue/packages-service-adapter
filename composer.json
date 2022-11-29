@@ -1,0 +1,35 @@
+{
+    "name": "companue/package-skeleton",
+    "description": "This is a laravel package for ...",
+    "autoload": {
+        "psr-4": {
+            "Companue\\PackageSkeleton\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Companue\\PackageSkeleton\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "mimalefdal",
+            "email": "mimalefdal@tarasheafzar.ir"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "orchestra/testbench": "^7.13"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Companue\\PackageSkeleton\\Providers\\PackageServiceProvider",
+                "Companue\\PackageSkeleton\\Providers\\RouteServiceProvider"
+            ],
+            "aliases": {
+                "PackageSkeleton": "Companue\\PackageSkeleton\\Facades\\PackageSkeleton"
+            }
+        }
+    }
+}

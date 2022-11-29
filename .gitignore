@@ -1,0 +1,4 @@
+.phpunit.results.cache
+/vendor
+tests/Coverage/
+composer.lock
