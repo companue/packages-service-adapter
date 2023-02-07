@@ -1,8 +1,8 @@
 <?php
 
-namespace Companue\PackageSkeleton;
+namespace Companue\ServiceAdapter;
 
-class PackageSkeleton
+class ServiceAdapter
 {
     function installed()
     {
@@ -13,7 +13,7 @@ class PackageSkeleton
     {
         $content = file_get_contents(base_path('composer.json'));
         $content = json_decode($content, true);
-        $version = $content["require"]["companue/package-skeleton"];
+        $version = $content["require"]["companue/service-adapter"];
 
         return $version;
     }

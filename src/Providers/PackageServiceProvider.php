@@ -1,8 +1,8 @@
 <?php
 
-namespace Companue\PackageSkeleton\Providers;
+namespace Companue\ServiceAdapter\Providers;
 
-use Companue\PackageSkeleton\PackageSkeleton;
+use Companue\ServiceAdapter\ServiceAdapter;
 use Illuminate\Support\ServiceProvider;
 
 class PackageServiceProvider extends ServiceProvider
@@ -11,7 +11,7 @@ class PackageServiceProvider extends ServiceProvider
     {
         $this->loadViewsFrom(
             $this->basePath('resources/views/'),
-            'package-skeleton'
+            'service-adapter'
         );
 
         $this->loadMigrationsFrom(
@@ -20,7 +20,7 @@ class PackageServiceProvider extends ServiceProvider
 
         $this->loadTranslationsFrom(
             $this->basePath('lang'),
-            'package-skeleton'
+            'service-adapter'
         );
 
         $this->loadJsonTranslationsFrom(
@@ -28,27 +28,27 @@ class PackageServiceProvider extends ServiceProvider
         );
 
         $this->publishes([
-            $this->basePath('lang') => base_path('lang/vendor/package-skeleton')
-        ], 'package-skeleton-translations');
+            $this->basePath('lang') => base_path('lang/vendor/service-adapter')
+        ], 'service-adapter-translations');
 
         $this->publishes([
             $this->basePath('database/migrations') => database_path('migrations')
-        ], 'package-skeleton-migrations');
+        ], 'service-adapter-migrations');
 
         $this->publishes([
-            $this->basePath('resources/views/') => resource_path('views/vendor/package-skeleton')
-        ], 'package-skeleton-views');
+            $this->basePath('resources/views/') => resource_path('views/vendor/service-adapter')
+        ], 'service-adapter-views');
 
         $this->publishes(
             [
-                $this->basePath('config/package-skeleton.php') => base_path('config/package-skeleton.php')
+                $this->basePath('config/service-adapter.php') => base_path('config/service-adapter.php')
             ],
-            'package-skeleton-configuration'
+            'service-adapter-configuration'
         );
 
         $this->publishes([
-            $this->basePath('/resources/static') => public_path('vendor/package-skeleton')
-        ], 'package-skeleton-assets');
+            $this->basePath('/resources/static') => public_path('vendor/service-adapter')
+        ], 'service-adapter-assets');
 
         if ($this->app->runningInConsole()) {
             $this->commands([
@@ -59,11 +59,11 @@ class PackageServiceProvider extends ServiceProvider
 
     public function register()
     {
-        $this->app->bind('package-skeleton', function () {
-            return new PackageSkeleton;
+        $this->app->bind('service-adapter', function () {
+            return new ServiceAdapter;
         });
 
-        $this->mergeConfigFrom($this->basePath('config/package-skeleton.php'), 'package-skeleton');
+        $this->mergeConfigFrom($this->basePath('config/service-adapter.php'), 'service-adapter');
     }
 
     protected function basePath($path = '')

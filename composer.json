@@ -1,14 +1,15 @@
 {
-    "name": "companue/package-skeleton",
-    "description": "This is a laravel package for ...",
+    "name": "companue/service-adapter",
+    "description": "This is a laravel package for add service compability for companue-based apps",
+    "licence": "MIT",
     "autoload": {
         "psr-4": {
-            "Companue\\PackageSkeleton\\": "src/"
+            "Companue\\ServiceAdapter\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Companue\\PackageSkeleton\\Tests\\": "tests/"
+            "Companue\\ServiceAdapter\\Tests\\": "tests/"
         }
     },
     "authors": [
@@ -24,11 +25,11 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Companue\\PackageSkeleton\\Providers\\PackageServiceProvider",
-                "Companue\\PackageSkeleton\\Providers\\RouteServiceProvider"
+                "Companue\\ServiceAdapter\\Providers\\PackageServiceProvider",
+                "Companue\\ServiceAdapter\\Providers\\RouteServiceProvider"
             ],
             "aliases": {
-                "PackageSkeleton": "Companue\\PackageSkeleton\\Facades\\PackageSkeleton"
+                "ServiceAdapter": "Companue\\ServiceAdapter\\Facades\\ServiceAdapter"
             }
         }
     }

@@ -1,13 +1,13 @@
 <?php
 
-namespace Companue\PackageSkeleton\Providers;
+namespace Companue\ServiceAdapter\Providers;
 
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Route;
 
 class RouteServiceProvider extends ServiceProvider
 {
-    protected $namespace = 'Companue\PackageSkeleton\Http\Controllers';
+    protected $namespace = 'Companue\ServiceAdapter\Http\Controllers';
 
     public function map()
     {

@@ -1,10 +1,10 @@
 <?php
 
-namespace Companue\PackageSkeleton\Tests\Unit;
+namespace Companue\ServiceAdapter\Tests\Unit;
 
-use Companue\PackageSkeleton\Facades\PackageSkeleton;
+use Companue\ServiceAdapter\Facades\ServiceAdapter;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Companue\PackageSkeleton\Tests\TestCase;
+use Companue\ServiceAdapter\Tests\TestCase;
 
 class UnitTest extends TestCase
 {
@@ -13,6 +13,6 @@ class UnitTest extends TestCase
     /** @test */
     function it_returns_ok()
     {
-        $this->assertEquals('OK', PackageSkeleton::installed());
+        $this->assertEquals('OK', ServiceAdapter::installed());
     }
 }
