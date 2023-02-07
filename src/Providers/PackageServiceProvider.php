@@ -49,6 +49,12 @@ class PackageServiceProvider extends ServiceProvider
         $this->publishes([
             $this->basePath('/resources/static') => public_path('vendor/package-skeleton')
         ], 'package-skeleton-assets');
+
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                // ConsoleCommand::class,
+            ]);
+        }
     }
 
     public function register()
